@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Calculadora de Ventas</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header class="app-header">
+            <h1>Registro de Ventas</h1>
+        </header>
+
+        <main class="sales-form">
+            <!-- Producto 1: Plato Completo -->
+            <section class="product-card">
+                <div class="product-info">
+                    <span class="product-name">Plato completo</span>
+                    <span class="product-price">Precio: Bs 18</span>
+                </div>
+                <div class="input-group">
+                    <label for="qty-plato">Cantidad vendida</label>
+                    <input type="number" id="qty-plato" min="0" step="1" placeholder="0">
+                </div>
+                <div class="subtotal-display">
+                    <label>Total - Plato completo</label>
+                    <div class="calculated-field">Bs <span id="total-plato">0</span></div>
+                </div>
+            </section>
+
+            <!-- Producto 2: Salchipapa -->
+            <section class="product-card">
+                <div class="product-info">
+                    <span class="product-name">Salchipapa</span>
+                    <span class="product-price">Precio: Bs 10</span>
+                </div>
+                <div class="input-group">
+                    <label for="qty-salchi">Cantidad vendida</label>
+                    <input type="number" id="qty-salchi" min="0" step="1" placeholder="0">
+                </div>
+                <div class="subtotal-display">
+                    <label>Total - Salchipapa</label>
+                    <div class="calculated-field">Bs <span id="total-salchi">0</span></div>
+                </div>
+            </section>
+
+            <!-- Producto 3: Refresco -->
+            <section class="product-card">
+                <div class="product-info">
+                    <span class="product-name">Refresco</span>
+                    <span class="product-price">Precio: Bs 3</span>
+                </div>
+                <div class="input-group">
+                    <label for="qty-refresco">Cantidad vendida</label>
+                    <input type="number" id="qty-refresco" min="0" step="1" placeholder="0">
+                </div>
+                <div class="subtotal-display">
+                    <label>Total - Refresco</label>
+                    <div class="calculated-field">Bs <span id="total-refresco">0</span></div>
+                </div>
+            </section>
+
+            <!-- Dinero para Cambio -->
+            <section class="product-card accent-card">
+                <div class="product-info">
+                    <span class="product-name">Dinero para Cambio</span>
+                </div>
+                <div class="input-group">
+                    <label for="cash-change">Cantidad inicial / Cambio</label>
+                    <input type="number" id="cash-change" min="0" step="1" placeholder="0">
+                </div>
+            </section>
+        </main>
+
+        <footer class="summary-footer">
+            <div class="grand-total-container secondary-total">
+                <span class="total-label">Total ventas</span>
+                <span class="total-value-small">Bs <span id="grand-total">0</span></span>
+            </div>
+            <div class="grand-total-container">
+                <span class="total-label">Total General</span>
+                <span class="total-value">Bs <span id="final-total">0</span></span>
+            </div>
+            <button id="reset-btn" class="reset-button">Limpiar Campos</button>
+        </footer>
+    </div>
+
+    <script type="module" src="main.js"></script>
+</body>
+</html>
